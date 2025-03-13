@@ -4,29 +4,28 @@ class Game():
     multiplayer = False
     note = 0
     
-# Primeiro Jogo
-game1 = Game()
-game1.name = "Batman: Arkham City"
-game1.yearLauch = 2012
-game1.multiplayer = False
-game1.note = 10
+    def __init__(self, name="", yearLauch=0, multiplayer=False, note=0):
+        self.name = name
+        self.yearLauch = yearLauch
+        self.multiplayer = multiplayer
+        self.note = note
+    
+    def __str__(self):
+        return f"Game: {self.name},"
+    
+game1 = Game("Batman: Arkham City", 2012, False, 10)
+game2 = Game("Batman™: Arkham Origins", 2013, False, 9)
+game3 = Game("Hitman: Absolution", 2012, False, 8.5)
+game4 = Game("Dead Space", 2008, False, 10)
+game5 = Game("Resident Evil 4", 2023, False, 9)
 
 
-# Segundo Jogo
-game2 = Game()
-game2.name = "Batman™: Arkham Origins"
-game2.yearLauch = 2013
-game2.multiplayer = False
-game2.note = 9
 
-# Terceiro Jogo
-game3 = Game()
-game3.name = "Hitman: Absolution"
-game3.yearLauch = 2012
-game3.multiplayer = False
-game3.note = 8.5
+    
 
 print("###Dados do Jogo###")
 print(f"Nome do Jogo: {game1.name}\nAno de Lançamento: {game1.yearLauch}")
 print(f"\nNome do Jogo: {game2.name}\nAno de Lançamento: {game2.yearLauch}")
 print(f"\nNome do Jogo: {game3.name}\nAno de Lançamento: {game3.yearLauch}")
+print(f"\nNome do Jogo: {game4.name}\nAno de Lançamento: {game4.yearLauch}")
+print(f"\nNome do Jogo: {game5.name}\nAno de Lançamento: {game5.yearLauch}")
