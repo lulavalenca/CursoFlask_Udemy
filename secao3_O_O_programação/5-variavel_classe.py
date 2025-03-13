@@ -1,9 +1,11 @@
 class Game:
+    total_games = 0
     def __init__(self, name="", yearLaunch=0, multiplayer=0, note=0):
         self.name = name
         self.yearLaunch = yearLaunch
         self.multiplayer = multiplayer
         self.note = note
+        Game.total_games += 1
         self.totalEvaluation = 0
         self.evaluators = 0
         
@@ -38,3 +40,5 @@ game2.evaluete(10)
 game2.evaluete(9.0)
 game2.average()
 
+# Exibindo o numero total de jogos Criados
+print(f"Total de jogos criados: {Game.total_games}")
