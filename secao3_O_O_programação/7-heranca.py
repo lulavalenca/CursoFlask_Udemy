@@ -35,4 +35,10 @@ class SinglePlayerGame(Game):
         
     def technical_sheet(self):
         super().technical_sheet()
-        print
+        print(f"Enredo: {self.storyline}\n")
+        
+mult_game = Game("Call of Duty: Modern Warfare II", 2022, True, 9.5)
+mult_game.technical_sheet()
+
+sing_game = SinglePlayerGame("The Witcher 3: Wild Hunt", 2015, False, 10, "Geralt of Rivia's journey to find his adopted daughter.")
+sing_game.technical_sheet()
